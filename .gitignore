@@ -5,3 +5,7 @@
 *.synctex.gz
 *.toc
 *.out
+*.idx
+*.ilg
+*.ind
+.vscode

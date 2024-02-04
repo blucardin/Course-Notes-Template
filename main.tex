@@ -24,6 +24,10 @@
 \usepackage{cancel} % provides \cancel{} and \bcancel{} for crossing out in math mode
 \usepackage{lmodern} % Latin Modern font, vectorized and with more glyphs
 
+\usepackage[makeindex]{imakeidx} % provides indexing
+\makeindex[columns=2, title=Index, intoc] % set up the index
+\newcommand{\boldindex}[1]{\textbf{#1}\index{#1}} % a new command that bolds text and adds it to the index
+
 \usepackage{draculatheme} % provides a dark mode for the document
 % remember to change the \hypersetup colors if using this package
 
@@ -73,14 +77,22 @@ This document is a review of the \name\ course. I had some time on my hands and 
 \pagebreak
 
 \section{Section 1}
+\subsection{Subsection 1}
+\boldindex{Definition} will be inserted into the index. 
+
 
 \pagebreak
 \appendix
-\section{Equations List}
+\section*{Equations List}
+\addcontentsline{toc}{section}{Equations List}%
 
 
 \pagebreak
-\section{Credits}
+\printindex
+
+\pagebreak
+\section*{Credits}
+\addcontentsline{toc}{section}{Credits}%
 
 
 \end{document}
