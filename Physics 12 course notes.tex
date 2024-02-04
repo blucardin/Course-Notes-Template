@@ -25,29 +25,33 @@
 \usepackage{lmodern} % Latin Modern font, vectorized and with more glyphs
 
 \usepackage{draculatheme} % provides a dark mode for the document
+% remember to change the \hypersetup colors if using this package
 
-% \usepackage{darkmode}
+% \usepackage{darkmode} 
 % \enabledarkmode
 
-\makeatletter
-\newcommand\reaction@[1]{\begin{equation}\ce{#1}\end{equation}}
-\newcommand\reaction@nonumber[1]%
-{\begin{equation*}\ce{#1}\end{equation*}}
-\newcommand\reaction{\@ifstar{\reaction@nonumber}{\reaction@}}
-\makeatother
-
-
-\newcommand{\name}{SPH4U1 Course Notes}
-\title{\name}
+\newcommand{\code}{Insert Course Code Here}
+\newcommand{\name}{Insert Course Name Here}
+\title{\code\ Course Notes}
 \author{Noah Virjee}
 \date{June 2022}
 
 \usepackage{hyperref}
-\hypersetup{ % set up hyperref to have a nice looking set of colors
+% \hypersetup{ % set up hyperref to have a nice looking set of colors
+%     colorlinks=true,
+%     linkcolor=blue,
+%     filecolor=magenta,      
+%     urlcolor=blue,
+%     pdftitle={\name},
+%     pdfpagemode=FullScreen,
+%     }
+
+% if dracula theme is enabled, set the hyperref colors to match
+\hypersetup{
     colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=blue,
+    linkcolor=draculapurple,
+    filecolor=draculapurple,      
+    urlcolor=draculapurple,
     pdftitle={\name},
     pdfpagemode=FullScreen,
     }
@@ -62,7 +66,7 @@
 }}
 
 \begin{abstract}
-This document is a review of the Grade 12 Physics course. I had some time on my hands and I really needed to study for exams so here goes nothing. If you find any mistakes, please let me know so I can fix them. I hope this helps you!
+This document is a review of the \name\ course. I had some time on my hands and I really needed to study for exams so here goes nothing. If you find any mistakes, please let me know so I can fix them. I hope this helps you!
 \end{abstract}
 
 \tableofcontents
